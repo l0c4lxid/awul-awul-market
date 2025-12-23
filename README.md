@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Awul Awul Market
 
-## Getting Started
+Website company profile + katalog visual untuk toko pakaian thrift Awul Awul Market. Fokus pada UI/UX modern, image-first, mobile-first, dan CTA WhatsApp yang selalu terlihat.
 
-First, run the development server:
+## Highlight
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Desain fashion-oriented dengan layout minimal dan kontras tinggi.
+- Katalog produk responsif: 1–2 kolom (mobile), 2–3 kolom (tablet), 4 kolom (desktop).
+- Animasi ringan (<= 200ms) dengan Framer Motion: fade-in on scroll, hover/tap scale.
+- Trust-driven content: rating, testimoni, dan lokasi jelas.
+- Sticky WhatsApp floating button di mobile.
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+- Lucide React
+- next/image
+
+## Struktur Folder
+
+```
+app/
+  layout.tsx
+  page.tsx
+  globals.css
+components/
+  footer.tsx
+  hero.tsx
+  motion-section.tsx
+  navbar.tsx
+  product-card.tsx
+  testimonial-card.tsx
+  ui/
+    badge.tsx
+    button.tsx
+    card.tsx
+    separator.tsx
+    sheet.tsx
+lib/
+  data.ts
+  utils.ts
+public/
+  images/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Data Bisnis
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Nama: Awul Awul Market
+- Kategori: Toko Pakaian / Thrift
+- Rating: 4.8 (6 ulasan)
+- Alamat: Jl. Karet, Karet, Pleret, Kec. Pleret, Kabupaten Bantul, DI Yogyakarta 55791
+- WhatsApp: 0822-8186-0292
+- Layanan: Ambil di toko, Pesan antar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Data bisnis, katalog, dan testimoni tersimpan di `lib/data.ts`.
 
-## Learn More
+## Menjalankan Project
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Buka `http://localhost:3000` di browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Catatan UI/UX
 
-## Deploy on Vercel
+- Typography: Plus Jakarta Sans + Inter.
+- Warna utama: hitam, putih, abu; aksen earthy (olive/coklat muda).
+- CTA WhatsApp ada di navbar, section kontak, dan floating button di mobile.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run start
+```
+
+## Deploy
+
+Siap deploy ke Vercel.
