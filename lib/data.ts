@@ -7,6 +7,7 @@ export const businessInfo = {
     "Jl. Karet, Karet, Pleret, Kec. Pleret, Kabupaten Bantul, DI Yogyakarta 55791",
   phone: "082281860292",
   phoneDisplay: "0822-8186-0292",
+  phoneInternational: "+62 822-8186-0292",
   whatsappLink: "https://wa.me/6282281860292",
   services: ["Ambil di toko", "Pesan antar"],
   heroImage: "/images/hero-01.svg",

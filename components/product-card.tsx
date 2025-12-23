@@ -12,11 +12,13 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const easeStandard: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+      transition={{ duration: 0.2, ease: easeStandard }}
       className="h-full"
     >
       <Card className="group flex h-full flex-col overflow-hidden border-neutral-200 bg-white/90">

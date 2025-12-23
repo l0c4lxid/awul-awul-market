@@ -8,12 +8,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { businessInfo } from "@/lib/data";
 
+const easeStandard: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   animate: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.2, ease: "easeOut" },
+    transition: { duration: 0.2, ease: easeStandard },
   },
 };
 
@@ -74,7 +76,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.2, ease: easeStandard }}
           className="relative min-h-[320px] w-full overflow-hidden rounded-[28px] border border-neutral-200 bg-neutral-100 shadow-lg"
         >
           <Image

@@ -21,8 +21,38 @@ import { Separator } from "@/components/ui/separator";
 import { businessInfo, products, testimonials } from "@/lib/data";
 
 export default function Home() {
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://awul-awul-market.vercel.app";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    name: businessInfo.name,
+    url: siteUrl,
+    image: `${siteUrl}${businessInfo.heroImage}`,
+    telephone: businessInfo.phoneInternational,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Jl. Karet, Karet, Pleret, Kec. Pleret",
+      addressLocality: "Bantul",
+      addressRegion: "DI Yogyakarta",
+      postalCode: "55791",
+      addressCountry: "ID",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: businessInfo.rating,
+      reviewCount: businessInfo.reviews,
+    },
+    areaServed: "Bantul",
+    priceRange: "$$",
+  };
+
   return (
     <div className="min-h-screen bg-[#f6f4f1] text-neutral-950 [background-image:radial-gradient(circle_at_top,_rgba(217,207,188,0.5),_transparent_55%),radial-gradient(circle_at_80%_20%,_rgba(200,208,197,0.4),_transparent_45%)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-20 pt-10 sm:px-6 lg:px-10 lg:pt-16">
         <Hero />

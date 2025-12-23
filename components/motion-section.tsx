@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
+const easeStandard: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const fadeIn = {
   hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.2, ease: "easeOut" },
+    transition: { duration: 0.2, ease: easeStandard },
   },
 };
 
