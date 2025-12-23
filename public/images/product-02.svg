@@ -1,0 +1,14 @@
+<svg width="800" height="900" viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-02" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8d0c5" />
+      <stop offset="100%" stop-color="#f7f2ea" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" rx="48" fill="url(#bg-02)" />
+  <rect x="120" y="160" width="560" height="580" rx="40" fill="#f9f6f1" />
+  <rect x="200" y="240" width="400" height="300" rx="32" fill="#2f2a24" />
+  <rect x="260" y="320" width="280" height="260" rx="28" fill="#f1e8dc" />
+  <text x="260" y="660" font-family="Arial" font-size="28" letter-spacing="6" fill="#2f2a24">AAM</text>
+  <text x="260" y="700" font-family="Arial" font-size="16" fill="#2f2a24">THRIFT ITEM</text>
+</svg>
